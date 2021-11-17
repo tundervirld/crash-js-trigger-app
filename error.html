@@ -1,0 +1,48 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<script async src="https://cdn.ampproject.org/v0.js">
+
+	</script>
+	<title>Error, AMPs</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	 crossorigin="anonymous">
+	</script>
+    <script async src="https://cdn.ampproject.org/v0.js">
+	</script>
+	<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js">
+	</script>
+</head>
+
+<body>
+	<h1 id="hello">Error!</h1>
+	<input id="clickMe" type="button" value="clickme" onclick="doFunction();" />
+  <amp-analytics type="dynatrace">
+    <script type="application/json">
+        {
+            "vars": {
+              "app": "888f2289690c729f",
+              "protocol": "https",
+              "environment" : "bf.dynatrace.com",
+              "port": "443",
+              "tenant": "bf86667dgy"
+            }
+        }
+    </script>
+</amp-analytics>
+	<script src="error.js">
+	</script>
+  <script>
+  $(document).ready(function(){
+    $('#clickMe').click(function(){
+       CrashTrigger();
+    });
+  });
+</script>
+
+</body>
+
+</html>
